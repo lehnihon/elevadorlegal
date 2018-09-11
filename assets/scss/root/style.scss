@@ -1,0 +1,271 @@
+/*
+Theme Name: Elevador Legal
+Author: Leandro
+Description: Description
+Version: 1.0.0
+*/
+
+@import "../bootstrap/bootstrap";
+body{
+  font-family: 'Titillium Web', sans-serif;
+  color:#636363;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1{
+  font-size:32px;
+}
+
+h2{
+  font-size:44px;
+  line-height:40px;
+}
+
+a:hover{
+  text-decoration:none;
+}
+
+ul{
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+
+#header{
+  #nav-top{
+    background-color:#2665bd;
+    text-align:right;
+    padding:5px 0;
+    ul{
+      li{
+        display:inline-block;
+        a{
+          color:#FFF;
+          font-size:14px;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+        }
+        a:hover{
+          color:#92d7de;
+        }
+      }
+      li.link{
+        padding-left:10px;
+      }
+      li.redes{
+        padding-left:5px;
+      }
+      li.rfirst{
+        padding-left:25px;
+      }
+    }
+  }
+
+  #logo-top{
+    margin-top:25px;
+    margin-bottom:25px;
+    .logo-boxa{
+      text-align:right;
+    }
+    .logo-boxb{
+      text-align:left;
+      .logo-desc{
+        margin-top:15px;
+        float:left;
+        h1{
+          font-size:18px;
+          color:#c21716;
+          font-weight:bold;
+          margin-bottom:0;
+        }
+        h5{
+          font-size:16px;
+        }
+      }
+      .btn-nav{
+        float:right;
+        margin-top:20px;
+      }
+    }
+  }
+
+  nav{
+    font-family: 'Titillium Web', sans-serif;
+    margin-bottom:25px;
+    a{
+      color:#636363;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    a:hover{
+      color:black;
+    }
+    .lupa{
+      margin-left: auto;
+      padding:0 15px;
+    }
+  }
+}
+
+#content{
+  article.design-a{
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+    padding:20px;
+    a{
+      .cat{
+        color:#55504a;
+        margin-bottom:25px;
+      }
+
+      h2{
+        color:#c21716;
+        font-weight:800;
+        font-size:30px;
+        margin-bottom:20px;
+      }
+      p{
+        color:#c21716;
+      }
+    }
+  }
+}
+
+/* ICONE HAMBURGUER*/
+#nav-icon1 {
+  width: 25px;
+  height: 16px;
+  position: relative;
+  display:inline-block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #55504a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 8px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 16px;
+}
+
+#nav-icon1.open{
+  z-index:11;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 8px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 8px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.8);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 23%;
+  width: 100%;
+  text-align: center;
+  .lang{
+    display:inline-block;
+    list-style:none;
+    padding:0;
+    padding-right:15px;
+    li{
+      display:inline-block;
+      border-right:1px solid #FFF;
+      a{
+        display:block;
+        padding:0px 8px;
+      }
+      a.active{
+        color:#997e4c;
+      }
+    }
+    li:last-child{
+      border:0;
+    }
+  }
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 34px;
+  color: #FFF;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color:#997e4c;
+}
+
+.overlay-hg {
+  height: 100vh;
+}
